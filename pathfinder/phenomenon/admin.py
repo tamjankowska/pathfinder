@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Phenomena, Location
 
-# Register your models here.
+admin.site.register(Phenomena)
+admin.site.register(Location)
