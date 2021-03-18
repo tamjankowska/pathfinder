@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Phenomenon{% endblock %}
+{% block content %}
+<ul>
+{% for phenomena in phenomenon %}
+    <a href="{% url 'phenomena' phenomena.id %}">
+        <li>{{ phenomena.name }}: {{ phenomena.location }}</li>
+        <img src={{ phenomena.image.url }} alt="dyatlov pass incident" width=20% height=auto/>
+    </a>
+    <p>{{ phenomena.description }}</p>
+{% empty %}
+    <li>Nothing strange here!</li>
+{% endfor %}
+</ul>
+{% endblock %}
