@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pathfinder"
+name = "phenomenon"
 version = "0.1.0"
 description = ""
 authors = ["Tam <tam.jankowska@gmail.com>"]
