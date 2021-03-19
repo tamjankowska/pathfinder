@@ -14,14 +14,16 @@ class PhenomenaView(TemplateView):
         print(request.POST)
         return HttpResponse("Whatever you want")
 
-def index(request):
-    context = {"phenomenon": Phenomena.objects.all()}
-    return render(request, "phenomenon/index.html", context)
+class IndexView(TemplateView):
+    template_name = "phenomenon/index.html"
 
-# def phenomena(request, phenomena_id):
-#     context = {"phenomena": Phenomena.objects.get(pk=phenomena_id)}
-#     return render(request, "phenomenon/phenomena.html", context)
+    def get(self, request, *args, **kwargs):
+        context = {"phenomenon": Phenomena.objects.all()}
+        return render(request, self.template_name, context)
 
-def locations(request):
-    context = {"locations": Location.objects.all()}
-    return render(request, "phenomenon/locations.html", context)
+class LocationsView(TemplateView):
+    template_name = "phenomenon/locations.html"
+
+    def get(self, request, *args, **kwargs):
+        context = {"locations": Location.objects.all()}
+        return render(request, template_name, context)
