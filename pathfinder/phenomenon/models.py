@@ -1,12 +1,13 @@
 from django.db import models
 from taggit.managers import TaggableManager
+from django.urls import reverse
 
 class Location(models.Model):
     name = models.CharField(max_length=30)
     country = models.CharField(max_length=30, default = "Unknown")
 
     def __str__(self):
-        return f"{self.name}"
+        return self.name
 
 class Phenomena(models.Model):
     name = models.CharField(max_length=30)
@@ -18,3 +19,6 @@ class Phenomena(models.Model):
 
     def __str__(self):
         return f"{self.name}: {self.description[:30]}... "
+
+    def get_absolute_url(self):
+        return reverse('phenomena', args=[str(self.id)])

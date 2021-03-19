@@ -3,7 +3,7 @@
 {% block content %}
 <ul>
 {% for phenomena in phenomenon %}
-    <a href="{% url 'phenomena' phenomena.id %}">
+    <a href="{% phenomena.get_absolute_url %}">
         <li>{{ phenomena.name }}: {{ phenomena.location }}</li>
         <img src={{ phenomena.image.url }} alt="incident image" width=20% height=auto/>
     </a>
