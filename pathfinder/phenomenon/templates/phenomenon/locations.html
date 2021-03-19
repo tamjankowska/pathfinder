@@ -3,7 +3,9 @@
 {% block content %}
 <ul>
 {% for location in locations %}
-    <li>{{ location.name }}</li>
+    <a href="{{ location.get_absolute_url }}">
+        <li>{{ location.country }}</li>
+    </a>
 {% empty %}
     <li>No locations.</li>
 {% endfor %}

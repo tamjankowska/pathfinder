@@ -8,6 +8,9 @@ class Location(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def get_absolute_url(self):
+        return reverse('location', args=[str(self.id)])
 
 class Phenomena(models.Model):
     name = models.CharField(max_length=30)
