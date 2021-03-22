@@ -9,12 +9,23 @@
     <body>
         {% block navbar %}
         <nav class="nav">
-            <a href="{% url 'index' %}">
-                Home
-            </a>
-            <a href="{% url 'locations' %}">
-                Locations
-            </a>
+            <ul>
+                <li>
+                    <a href="{% url 'index' %}">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'locations' %}">
+                        Locations
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'about' %}">
+                        About
+                    </a>
+                </li>
+            </ul>
         </nav>
         {% endblock %}
         {% block content %}{% endblock %}

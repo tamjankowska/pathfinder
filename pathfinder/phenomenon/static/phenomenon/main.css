@@ -1,7 +1,17 @@
-* {
+/* * {
     background-color: #101018;
+} */
+
+.nav {
+    margin: 3em;
 }
 
-.index list {
-    padding-top: 20%
+.nav ul li {
+    list-style-type: none;
+    display: inline-block
+}
+
+.nav ul li a {
+    display: block;
+    width: 8em;
 }
