@@ -1,17 +1,51 @@
-/* * {
+* {
     background-color: #101018;
-} */
+}
+
+/* nav */
 
 .nav {
     margin: 3em;
 }
 
-.nav ul li {
-    list-style-type: none;
-    display: inline-block
+.nav ul {
+    display: flex;
+    font-size: 2em;
+    margin-left: 2em;
+
 }
 
+.nav ul > li:first-child {
+    margin-right: auto;
+}
+.nav ul li {
+    list-style-type: none;
+}
+
+a .home:hover span {
+    display: none;
+}
+
+a .home:hover:before {
+    content: "Home"
+}
+
+a .about:hover span {
+    display: none;
+}
+
+a .about:hover:before {
+    content: "About"
+}
+a .locations:hover span {
+    display: none;
+}
+
+a .locations:hover:before {
+    content: "Locations"
+}
 .nav ul li a {
     display: block;
     width: 8em;
+    color: white;
 }

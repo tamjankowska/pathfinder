@@ -37,7 +37,7 @@ class LocationsView(TemplateView):
         return render(request, self.template_name, context)
 
 class AboutView(TemplateView):
-    template_name = "about.html"
+    template_name = "phenomenon/about.html"
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name)

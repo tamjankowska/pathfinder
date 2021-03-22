@@ -3,30 +3,33 @@
 {% load static %}
     <head>
         <meta charset="utf-8">
+        {% block CSS %}{% endblock %}
+        {% block fonts %}{% endblock %}
         <link rel="stylesheet" href="{% static 'phenomenon/main.css' %}">
+        <script src="https://kit.fontawesome.com/2173734033.js" crossorigin="anonymous"></script>
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
         {% block navbar %}
-        <nav class="nav">
+        <div class="nav">
             <ul>
                 <li>
-                    <a href="{% url 'index' %}">
-                        Home
+                    <a class = "home" href="{% url 'index' %}">
+                        <span><i class="fas fa-igloo home"></i></span>
                     </a>
                 </li>
                 <li>
-                    <a href="{% url 'locations' %}">
-                        Locations
+                    <a class = "locations" href="{% url 'locations' %}">
+                        <span><i class="fas fa-globe-europe locations"></i></span>
                     </a>
                 </li>
                 <li>
-                    <a href="{% url 'about' %}">
-                        About
+                    <a class = "about" href="{% url 'about' %}">
+                        <span><i class="fas fa-question about"></i></span>
                     </a>
                 </li>
             </ul>
-        </nav>
+        </div>
         {% endblock %}
         {% block content %}{% endblock %}
     </body>
