@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
+{% load static %}
     <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'phenomenon/main.css' %}">
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
+        <nav class="nav">
+            <ul class="nav ul">
+            {% for navbar_item in navbar_items %}
+                <a href="{{ navbar_item.url }}">
+                    <li class="nav item">{{ navbar_item.title }}</li>
+                </a>
+            {% endfor %}
+            </ul>
+        </nav>
         {% block content %}{% endblock %}
     </body>
 </html>

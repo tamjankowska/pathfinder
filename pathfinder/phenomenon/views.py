@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Phenomena, Location
+from .models import Phenomena, Location, NavbarItem
 from django.views.generic import TemplateView
 from django.http import HttpResponse
 
