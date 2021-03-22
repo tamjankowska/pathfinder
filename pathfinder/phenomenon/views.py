@@ -7,7 +7,7 @@ class IndexView(TemplateView):
     template_name = "phenomenon/index.html"
 
     def get(self, request, *args, **kwargs):
-        context = {"phenomenon": Phenomena.objects.all()}
+        context = {"phenomena": Phenomena.objects.all()}
         return render(request, self.template_name, context)
 
 class PhenomenaView(TemplateView):

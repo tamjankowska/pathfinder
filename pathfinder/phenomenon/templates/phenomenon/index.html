@@ -10,16 +10,16 @@
 {% block title %}Phenomenon{% endblock %}
 {% block content %}
 <div class = "header">
-    <h1>Unsolved Mysteries</h1>
+    <h1>Unsolved Phenomena</h1>
 </div>
 <div class = "phenomena-list">
     <ul>
-        {% for phenomena in phenomenon %}
-            <a href="{{ phenomena.get_absolute_url }}">
-                <li class="index list">{{ phenomena.name }}: {{ phenomena.location }}</li>
-                <img src={{ phenomena.image.url }} alt="incident image" width=20% height=auto/>
+        {% for phenomenon in phenomena %}
+            <a href="{{ phenomenon.get_absolute_url }}">
+                <li class="index list">{{ phenomenon.name }}: {{ phenomenon.location }}</li>
+                <img src={{ phenomenon.image.url }} alt="incident image" width=20% height=auto/>
             </a>
-            <p>{{ phenomena.description }}</p>
+            <p>{{ phenomenon.description }}</p>
         {% empty %}
             <li>Nothing strange here!</li>
         {% endfor %}
