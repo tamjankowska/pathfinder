@@ -1,3 +1,6 @@
+* {
+    background-color: #101018;
+}
 
 /* nav */
 
@@ -9,7 +12,6 @@
     display: flex;
     font-size: 2em;
     margin-left: 2em;
-    background-color: #101018d3;
 
 }
 
@@ -46,5 +48,4 @@ a .locations:hover:before {
     display: block;
     width: 8em;
     color: white;
-    text-transform: lowercase;
 }

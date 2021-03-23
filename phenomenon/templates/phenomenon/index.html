@@ -15,13 +15,13 @@
 <div class = "phenomena-list">
     <ul>
         {% for phenomenon in phenomena %}
-            <div class = "p-list-item">
                 <a href="{{ phenomenon.get_absolute_url }}">
-                    <li class="index list">{{ phenomenon.name }}: {{ phenomenon.location }}</li>
-                    <img src={{ phenomenon.image.url }} alt="incident image" width=20% height=auto/>
+                    <div class = "p-list-item">
+                        <li class="index list">{{ phenomenon.name }}: {{ phenomenon.location }}</li>
+                        <img src={{ phenomenon.image.url }} alt="incident image"/>
+                        <p>{{ phenomenon.description }}</p>
+                    </div>
                 </a>
-                <p>{{ phenomenon.description }}</p>
-            </div>
         {% empty %}
             <li>Nothing strange here!</li>
         {% endfor %}
