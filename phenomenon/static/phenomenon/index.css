@@ -115,9 +115,6 @@ h1 {
 	border-top: groove #ebede8c6 5px;
 }
 
-/* .phenomena-list, .p-list-item {
-	background-color: #A85751;
-} */
 .phenomena-list a {
 	color: white;
 	font-family: 'Cinzel', serif;
@@ -128,8 +125,6 @@ h1 {
 	margin: 1em;
 }
 .p-list-item {
-	/* display: inline-block;
-	vertical-align: top; */
 	list-style-type: none;
 	width: 30%; 
 }

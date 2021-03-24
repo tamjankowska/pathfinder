@@ -1,0 +1,1 @@
+Django, poetry, taggit, pillow, gunicorn
